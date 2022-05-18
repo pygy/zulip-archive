@@ -18,7 +18,7 @@ json_dir_path="${checked_out_repo_path}/zulip_json"
 img_dir_path="${checked_out_repo_path}/assets/img"
 streams_config_file_path="${checked_out_repo_path}/streams.yaml"
 initial_sha="$(git rev-parse HEAD)"
-
+GITHUB_ACTOR="pygy"
 if [ ! -f $streams_config_file_path ]; then
     echo "Missing streams.yaml file."
     exit 1
