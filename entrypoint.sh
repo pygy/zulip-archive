@@ -18,7 +18,6 @@ json_dir_path="${checked_out_repo_path}/zulip_json"
 img_dir_path="${checked_out_repo_path}/assets/img"
 streams_config_file_path="${checked_out_repo_path}/streams.yaml"
 initial_sha="$(git rev-parse HEAD)"
-GITHUB_ACTOR="pygy"
 if [ ! -f $streams_config_file_path ]; then
     echo "Missing streams.yaml file."
     exit 1
@@ -108,6 +107,7 @@ git config --global user.name "Archive Bot"
 git add -A
 git commit -m "Update archive."
 
+echo ${GITHUB_ACTOR}
 echo https://${GITHUB_ACTOR}:SECRET_TOKEN_WELL_TRIED@github.com/${GITHUB_REPOSITORY}
 
 git remote add origin2 https://${GITHUB_ACTOR}:${github_personal_access_token}@github.com/${GITHUB_REPOSITORY}
