@@ -62,7 +62,7 @@ export JSON_DIRECTORY=$json_dir_path
 export HTML_ROOT=""
 export ZULIP_ICON_URL="${github_pages_url}/assets/img/zulip.svg"
 
-ls -l
+mkdir -p archive
 
 if [ ! -d $json_dir_path ]; then
     mkdir -p $json_dir_path
