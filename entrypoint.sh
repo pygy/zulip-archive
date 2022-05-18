@@ -108,6 +108,8 @@ git config --global user.name "Archive Bot"
 git add -A
 git commit -m "Update archive."
 
+echo https://${GITHUB_ACTOR}:SECRET_TOKEN_WELL_TRIED@github.com/${GITHUB_REPOSITORY}
+
 git remote add origin2 https://${GITHUB_ACTOR}:${github_personal_access_token}@github.com/${GITHUB_REPOSITORY}
 
 git push origin2 HEAD:$archive_branch -f
